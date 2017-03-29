@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo1"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var number = prompt("Enter Input", "");
+	var p;
+	
+        
+	function reverse (a) {
+		var b = [], counter = 0;
+		for (var i = a.length-1; i >= 0; i -= 1) {
+		b[counter] = a[i];
+		counter += 1;
+	}
+  return b;
+}
+	var zz=reverse(number);
+	
+	for( i=0; i< number.length; i++) {
+	if (number[i] == zz[i]) {
+        document.getElementById("demo").innerHTML =
+        "Matched";
+    }
+	else {
+        document.getElementById("demo").innerHTML =
+        "Didn't Matched";
+    }
+	}
+	
+}
+</script>
+
+</body>
+</html>

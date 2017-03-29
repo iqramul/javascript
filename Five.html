@@ -1,0 +1,47 @@
+<html>
+<head>
+<script type="text/javascript">
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+	var y = document.forms["myForm"]["fpass"].value;
+    var z = document.forms["myForm"]["fconf"].value;
+    var w = document.forms["myForm"]["fadd"].value;
+    
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+	if (y == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+	if (y != z ) {
+        alert("Retype Password");
+        return false;
+    }if (z == "") {
+        alert("Confirm Password must be filled out");
+        return false;
+		
+    }if (w == "") {
+        alert("Address must be filled out");
+        return false;
+    }
+	
+}
+
+</script>
+</head>
+
+<body>
+
+<form name="myForm" action="/Third.html" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname"> <br>
+Password: <input type="password" name="fpass"> <br>
+Confirm Password: <input type="password" name="fconf"> <br>
+Address: <input type="textarea" name="fadd"> <br>
+
+<input type="submit" value="Submit">
+</form>
+</body>
+
+</html>
